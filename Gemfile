@@ -67,3 +67,16 @@ group :test do
   gem 'poltergeist', '~> 1.5.0'
   gem 'database_cleaner', '~> 1.2.0'
 end
+
+# For Development
+group :development do
+  gem "capistrano", "3.1.0"
+  gem "capistrano-rails"
+  gem "capistrano-bundler"
+  gem "capistrano3-unicorn"
+end
+
+# For staging and production environment
+group :staging, :production do
+  gem 'unicorn'
+end
