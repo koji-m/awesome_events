@@ -24,7 +24,7 @@ stderr_path = "#{ROOT}/log/unicorn-strerr.log"
 # before_fork、after_forkでは、Unicornのプロセスがフォークする前後の
 # 挙動を指定できる。以下のおまじないの詳細はドキュメントを参考のこと。
 before_fork do |server, worker|
-  defined?(ActiveRecord::Base) nad ActiveRecord::Base.connection.disconnect!
+  defined?(ActiveRecord::Base) and ActiveRecord::Base.connection.disconnect!
 
   old_pid = "#{ server.config[:pid] }.oldbin"
   unlsess old_pid == server.pid do

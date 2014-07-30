@@ -2,7 +2,7 @@
 lock '3.1.0'
 
 set :application, 'awesome_events'
-set :repo_url, 'git@github.com:koji-m/awrsome_events.git'
+set :repo_url, 'git@github.com:koji-m/awesome_events.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
