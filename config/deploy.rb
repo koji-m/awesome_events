@@ -51,6 +51,7 @@ end
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
+=begin
 namespace :deploy do
 
   desc 'Restart application'
@@ -73,3 +74,4 @@ namespace :deploy do
   end
 
 end
+=end
