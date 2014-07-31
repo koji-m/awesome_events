@@ -17,9 +17,8 @@ timeout 15
 preload_app true
 
 # log fle
-ROOT = File.dirname(File.dirname(__FILE__))
-stdout_path = "#{ROOT}/log/unicorn-stdout.log"
-stderr_path = "#{ROOT}/log/unicorn-strerr.log"
+stdout_path = "log/unicorn-stdout.log"
+stderr_path = "log/unicorn-strerr.log"
 
 # before_fork、after_forkでは、Unicornのプロセスがフォークする前後の
 # 挙動を指定できる。以下のおまじないの詳細はドキュメントを参考のこと。
