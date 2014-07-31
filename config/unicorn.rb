@@ -19,7 +19,7 @@ preload_app true
 # log fle
 stdout_path = "log/unicorn-stdout.log"
 stderr_path = "log/unicorn-strerr.log"
-=begin
+
 # before_fork、after_forkでは、Unicornのプロセスがフォークする前後の
 # 挙動を指定できる。以下のおまじないの詳細はドキュメントを参考のこと。
 before_fork do |server, worker|
@@ -32,7 +32,7 @@ before_fork do |server, worker|
     end
   end
 end
-
+=begin
 after_fork do |server, worker|
   defined?(ActiveRecord::Base) and ActiveRecord::Base.establish_connection
 end
