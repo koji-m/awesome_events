@@ -10,6 +10,8 @@ set :repo_url, 'git@github.com:koji-m/awesome_events.git'
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/var/www/awesome-events'
 
+set :deploy_via, :remote_cache
+
 # Default value for :scm is :git
 set :scm, :git
 
