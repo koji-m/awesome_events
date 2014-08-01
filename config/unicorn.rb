@@ -24,6 +24,7 @@ stderr_path = "log/unicorn-strerr.log"
 # 挙動を指定できる。以下のおまじないの詳細はドキュメントを参考のこと。
 before_fork do |server, worker|
   defined?(ActiveRecord::Base) and ActiveRecord::Base.connection.disconnect!
+=begin
   old_pid = "#{ server.config[:pid] }.oldbin"
   unlsess old_pid == server.pid do
     begin
@@ -31,6 +32,7 @@ before_fork do |server, worker|
     rescue Errno::ENOENT, Errno::ESRCH
     end
   end
+=end
 end
 
 after_fork do |server, worker|
