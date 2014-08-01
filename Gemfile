@@ -80,3 +80,6 @@ end
 group :staging, :production do
   gem 'unicorn'
 end
+
+# For NewRelic
+gem 'newrelic_rpm'
